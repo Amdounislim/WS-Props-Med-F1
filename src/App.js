@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import UserCard from './components/UserCard';
+import Users from './components/Users';
 
 function App() {
+
+  let name = "Hichem"
+
+  let persons = [{
+    name: "Khalil",
+    email: "khalil@gmail.com",
+    phone: 11111
+  },
+  {
+    name: "Hichem",
+    email: "hichem@gmail.com",
+    phone: 222222
+  },
+  {
+    name: "Mouna",
+    email: "mouna@gmail.com",
+    phone: 333333
+  }
+  ]
+
+  const affichage = () => {
+    alert('Hello')
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <UserCard name={name} email="hichem@gmail.com" phone={2587410} age={18} affichage={affichage} /> */}
+      <UserCard name={name} email="hichem@gmail.com" phone={2587410} age={18} affichage={affichage} >
+        <h6>Welcome</h6>
+      </UserCard>
+      {/* <UserCard /> */}
+      {/* <Users persons={persons} /> */}
     </div>
   );
 }
